@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  data-download:
+    build: .
+    volumes:
+      - data:./data
+  cluterer:
+    image: scikit-learn
+    volumes:
+      - data:./data
+volumes:
+  data: ./data
